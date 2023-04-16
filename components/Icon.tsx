@@ -15,9 +15,9 @@ type IconType = {
 export default function Icon({ size = 24, name, type, color, ...props }: IconType) {
   switch (type) {
     case 'FontAwesome':
-      return <FontAwesome name={name} size={size} style={iconStyles.icon} {...props} />;
+      return <FontAwesome name={name} size={size} style={iconStyles.icon} color={color} {...props}  />;
     case 'Ionicons':
-      return <Ionicons name={name} size={size} style={iconStyles.icon} {...props} />; 
+      return <Ionicons name={name} size={size} style={iconStyles.icon} color={color} {...props} />; 
   }
 }
 

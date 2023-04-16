@@ -3,12 +3,21 @@
  * https://docs.expo.io/guides/color-schemes/
  */
 
-import { 
-  Text as DefaultText, 
-  useColorScheme, 
-  View as DefaultView ,
+import {
+  Text as DefaultText,
+  useColorScheme,
+  View as DefaultView,
   TextInput as DefaultTextInput
 } from 'react-native';
+
+import {
+  TextInput as DefaultMTextInput,
+  Badge as DefaultMBadge,
+  Pressable as DefaultMPressable,
+  Wrap as DefaultMWrap,
+  Text as DefaultMText,
+  Button as DefaultMButton
+} from "@react-native-material/core";
 
 import Colors from '../constants/Colors';
 
@@ -55,4 +64,50 @@ export function TextInput(props: TextInputProps) {
   const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
 
   return <DefaultTextInput style={[{ color, backgroundColor }, style]} {...otherProps} />;
+}
+
+export function MWrap(props: ViewProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultMWrap style={[{ backgroundColor }, style]} {...otherProps} />;
+}
+
+export function MText(props: TextProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+
+  return <DefaultMText style={[{ color }, style]} {...otherProps} />;
+}
+
+export function MTextInput(props: TextInputProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultMTextInput style={[{ color, backgroundColor }, style]} {...otherProps} />;
+}
+
+export function MButton(props: TextInputProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultMButton style={[{ color, backgroundColor }, style]} {...otherProps} />;
+}
+
+export function MPressable(props: TextInputProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultMPressable style={[{ color, backgroundColor }, style]} {...otherProps} />;
+}
+
+export function MBadge(props: TextInputProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+  const backgroundColor = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultMBadge style={[{ color, backgroundColor }, style]} {...otherProps} />;
 }

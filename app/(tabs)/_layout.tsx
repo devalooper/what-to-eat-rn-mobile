@@ -16,9 +16,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-
           title: 'Ingredients',
-          tabBarIcon: ({ color, focused,  }) => {
+          tabBarIcon: ({ color, focused, }) => {
             if (focused) return <TabBarIcon type='Ionicons' name="fast-food" color={color} />
             return <TabBarIcon type='Ionicons' name="fast-food-outline" color={color} />
           }

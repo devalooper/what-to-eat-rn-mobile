@@ -1,5 +1,5 @@
 import { FlatList, ScrollView, StyleSheet, TouchableOpacity } from "react-native"
-import { Text, View } from "./Themed";
+import { View } from "./Themed";
 import React, { useState, useReducer } from "react";
 
 import Icon from "./Icon";
@@ -7,11 +7,13 @@ import Icon from "./Icon";
 import type { Tag, TagProps } from "../store/types";
 import TagReducer, { ACTION_TYPE } from "../store/reducer/Tag";
 
-import { TextInput, Badge, Pressable, Wrap } from "@react-native-material/core";
+import { TextInput, Badge, Pressable, Wrap, Text, Button } from "@react-native-material/core";
+
+import DummyTagData from "../store/dummyData/Tags";
 
 export default function TagInput() {
   const [input, setInput] = useState<string>("");
-  const [tags, dispatch] = useReducer(TagReducer, []);
+  const [tags, dispatch] = useReducer(TagReducer, DummyTagData);
 
   const deleteTag = (id: number) => dispatch({ type: ACTION_TYPE.REMOVE_TAG, payload: id });
   const addTag = (e: any) => {
@@ -25,17 +27,13 @@ export default function TagInput() {
       }
     })
     setInput("");
-
-    // again focus on input
-    e.target.focus();
   }
 
   return (
-    <View>
+    <View style={{ margin: 16, marginTop: 4 }}>
       <TextInput
         variant="outlined"
-        label="Add Ingredients"
-        style={{ margin: 16 }}
+        label="Ingredients"
         value={input}
         onChangeText={setInput}
         focusable={true}
@@ -43,11 +41,20 @@ export default function TagInput() {
         autoFocus={true}
         blurOnSubmit={false}
       />
-      <Wrap style={TagInputStyle.container}>
-        <Wrap m={4} >
-          {tags.map((tag) => <Tag tag={tag} deleteTag={deleteTag} />)}
+      <Text variant="caption">Please enter ingredients; Ex: [tomato, pepper, meat]</Text>
+      <ScrollView>
+        <Wrap style={TagInputStyle.container}>
+          <Wrap m={4} >
+            {tags.map((tag) => <Tag tag={tag} deleteTag={deleteTag} />)}
+          </Wrap>
         </Wrap>
-      </Wrap>
+      </ScrollView>
+      <Button
+        variant="contained"
+        onPress={addTag}
+        style={{ marginTop: 8 }}
+        title="Search"
+      />
     </View>
   )
 }
@@ -60,7 +67,7 @@ function Tag({ tag, deleteTag }: TagProps) {
       style={TagStyles.container}
       onPress={() => deleteTag(tag.id)}
     >
-      <Badge label={tag.name} />
+      <Badge label={tag.name} style={TagStyles.badge}/>
     </Pressable>
   )
 }
@@ -74,7 +81,7 @@ const TagStyles = StyleSheet.create({
     textAlign: "center",
     alignContent: "center",
     flexDirection: "row",
-    backgroundColor: "pink",
+    backgroundColor: "#f0f0f0",
     borderRadius: 10,
     padding: 4,
     margin: 4,
@@ -85,6 +92,10 @@ const TagStyles = StyleSheet.create({
   tagText: {
     fontSize: 18,
     fontWeight: "bold",
+  },
+  badge: {
+    // width: "100%",
+    height: "100%",
   }
 })
 

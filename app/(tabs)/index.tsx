@@ -1,14 +1,24 @@
 import { StyleSheet } from 'react-native';
+import { useState } from 'react';
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
+import { Text, View, TextInput } from '../../components/Themed';
 
-export default function TabOneScreen() {
+export default function Home() {
+  const [tags, setTags] = useState<{
+    tag: string;
+    tagsArray: string[];
+  }>({
+    tag: '',
+    tagsArray: []
+  })
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+      {/* <Text style={styles.title}>Home Page</Text>
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      <TextInput >
+        <Text lightColor="#7f4343" darkColor="rgba(255,255,255,0.1)">Please Enter Ingredients</Text>
+        {/* //TODO:: ADD A INPUT TO ADD TAGS TO THE ARRAY */}
+      </TextInput>
     </View>
   );
 }

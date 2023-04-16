@@ -3,16 +3,7 @@ import { Link, Tabs } from 'expo-router';
 import { Pressable, useColorScheme } from 'react-native';
 
 import Colors from '../../constants/Colors';
-
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import TabBarIcon from '../../components/Icon';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -25,29 +16,56 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
+
+          title: 'Ingredients',
+          tabBarIcon: ({ color, focused,  }) => {
+            if (focused) return <TabBarIcon type='Ionicons' name="fast-food" color={color} />
+            return <TabBarIcon type='Ionicons' name="fast-food-outline" color={color} />
+          }
+          // headerRight: () => (
+          //   <Link href="/modal" asChild>
+          //     <Pressable>
+          //       {({ pressed }) => (
+          //         <FontAwesome
+          //           name="info-circle"
+          //           size={25}
+          //           color={Colors[colorScheme ?? 'light'].text}
+          //           style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+          //         />
+          //       )}
+          //     </Pressable>
+          //   </Link>
+          // ),
         }}
       />
       <Tabs.Screen
-        name="two"
+        name="recipes"
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Recipes',
+          tabBarIcon: ({ color, focused }) => {
+            if (focused) return <TabBarIcon type='Ionicons' name="book" color={color} />
+            return <TabBarIcon type='Ionicons' name="book-outline" color={color} />
+
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="calorieCalculator"
+        options={{
+          title: 'Calorie Calculator',
+          tabBarIcon: ({ color, focused }) => {
+            if (focused) return <TabBarIcon type='Ionicons' name="calculator" color={color} />
+            return <TabBarIcon type='Ionicons' name="calculator-outline" color={color} />
+          }
+        }} />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => {
+            if (focused) return <TabBarIcon type='Ionicons' name="settings" color={color} />
+            return <TabBarIcon type='Ionicons' name="settings-outline" color={color} />
+          }
         }}
       />
     </Tabs>

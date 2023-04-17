@@ -4,6 +4,8 @@ import React from 'react';
 import { TabBarIcon } from '@/components';
 import { HomeNavigator } from '@/navigation/HomeNavigator';
 import { ProfileNavigator } from '@/navigation/ProfileNavigator';
+import { RecipesNavigator } from '@/navigation/RecipesNavigator';
+import { CalculatorNavigator } from '@/navigation/CalculatorNavigator';
 import { TABS } from '@/constants/navigation';
 
 const Tab = createBottomTabNavigator();
@@ -21,6 +23,8 @@ export function AppNavigator() {
       })}
     >
       <Tab.Screen name={TABS.home} component={HomeNavigator} />
+      <Tab.Screen name={TABS.recipes} component={RecipesNavigator} />
+      <Tab.Screen name={TABS.calculator} component={CalculatorNavigator} />
       <Tab.Screen name={TABS.profile} component={ProfileNavigator} />
     </Tab.Navigator>
   );

@@ -7,6 +7,8 @@ import { TABS } from '@/constants/navigation';
 const tabIcon = {
   [TABS.home]: homeIcon,
   [TABS.profile]: settingsIcon,
+  [TABS.recipes]: settingsIcon,
+  [TABS.calculator]: settingsIcon,
 };
 
 export function TabBarIcon({ color, routeName }) {

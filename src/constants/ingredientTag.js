@@ -1,0 +1,4 @@
+export const INGREDIENT_TAG = {
+  ADD_TAG: 'ADD_TAG',
+  REMOVE_TAG: 'REMOVE_TAG',
+}

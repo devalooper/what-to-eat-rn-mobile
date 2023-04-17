@@ -33,6 +33,7 @@ import React, { useState, useReducer, useEffect } from "react";
 import shortid from "shortid";
 
 import { Stack, Container, Box, Flex, Badge, HStack } from "native-base"
+import { Link } from "@react-navigation/native"
 
 
 // import { Wrap, Snackbar, Chip } from "@react-native-material/core";
@@ -115,7 +116,7 @@ export function Home() {
           popularTags.length > 0 && <Box >
             <Text variant="caption">Populer Ingredients</Text>
             <ScrollView>
-              <HStack direction="row" flexWrap="wrap"  mb="2.5" m={4} space={2} >
+              <HStack direction="row" flexWrap="wrap" mb="2.5" m={4} space={2} >
                 {popularTags.map((tag) => <Tag actionType={"ADD_TAG"} tag={tag} action={addExampleTag} />)}
               </HStack>
             </ScrollView>
@@ -127,12 +128,11 @@ export function Home() {
           <Text style={{ position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red" }}>{isError?.message}</Text>
         </Box>
       }
-      <Button
-        variant="contained"
-        onPress={addTag}
-        style={{ marginTop: 8 }}
-        title="Search"
-      />
+      <Link
+        to={{ screen: "Suggestions Screen", params: { tags } }}
+        style={{ marginTop: 8, fontSize: 16, fontWeight: "bold", color: "red", padding: 8, backgroundColor: "blue", textAlign: "center" }}>
+        Seach
+      </Link>
     </Box>
   )
 }

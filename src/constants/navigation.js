@@ -1,5 +1,6 @@
 export const NAVIGATION = {
   home: 'Home Screen',
+  suggestions: 'Suggestions Screen',
   login: 'Login Screen',
   recipes: 'Recipes Screen',
   calculator: 'Calculator Screen',
@@ -8,6 +9,7 @@ export const NAVIGATION = {
 
 export const TABS = {
   home: 'Home',
+  suggestions: 'Suggestions',
   recipes: 'Recipes',
   calculator: 'Calculator',
   profile: 'Profile',

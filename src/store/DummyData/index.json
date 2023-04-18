@@ -858,39 +858,39 @@
     "foodTitle": "vegetable",
     "cookTime": "30 dk",
     "ingredients": [
-        "500 gr mantar",
-        "1 adet soğan",
-        "2 diş sarımsak",
-        "1 yemek kaşığı tereyağı",
-        "1 yemek kaşığı sıvı yağ",
-        "1 yemek kaşığı un",
-        "1 su bardağı süt",
-        "1 su bardağı su",
-        "1 çay kaşığı karabiber",
-        "1 çay kaşığı tuz"
+      "500 gr mantar",
+      "1 adet soğan",
+      "2 diş sarımsak",
+      "1 yemek kaşığı tereyağı",
+      "1 yemek kaşığı sıvı yağ",
+      "1 yemek kaşığı un",
+      "1 su bardağı süt",
+      "1 su bardağı su",
+      "1 çay kaşığı karabiber",
+      "1 çay kaşığı tuz"
     ],
     "instructions": [
-        "Mantarları temizleyin ve ince dilimleyin.",
-        "Soğanı ince ince doğrayın.",
-        "Sarımsakları ezin.",
-        "Bir tencereye tereyağı ve sıvı yağı koyun.",
-        "Soğanları ekleyip kavurun.",
-        "Sarımsakları ekleyin ve kavurmaya devam edin.",
-        "Mantarları ekleyin ve karıştırın.",
-        "Unu ekleyip karıştırın.",
-        "Sütü ve suyu ekleyin ve karıştırın.",
-        "Tuz ve karabiberi ekleyin.",
-        "Mantarlar yumuşayana kadar pişirin.",
-        "Sıcak servis yapın."
+      "Mantarları temizleyin ve ince dilimleyin.",
+      "Soğanı ince ince doğrayın.",
+      "Sarımsakları ezin.",
+      "Bir tencereye tereyağı ve sıvı yağı koyun.",
+      "Soğanları ekleyip kavurun.",
+      "Sarımsakları ekleyin ve kavurmaya devam edin.",
+      "Mantarları ekleyin ve karıştırın.",
+      "Unu ekleyip karıştırın.",
+      "Sütü ve suyu ekleyin ve karıştırın.",
+      "Tuz ve karabiberi ekleyin.",
+      "Mantarlar yumuşayana kadar pişirin.",
+      "Sıcak servis yapın."
     ],
     "image": "https://www.example.com/images/mantar-yemegi.jpg"
-},
-{
-  "id": 28,
-  "title": "Domates Çorbası",
-  "foodTitle": "soup",
-  "cookTime": "30 dk",
-  "ingredients": [
+  },
+  {
+    "id": 28,
+    "title": "Domates Çorbası",
+    "foodTitle": "soup",
+    "cookTime": "30 dk",
+    "ingredients": [
       "5 adet orta boy domates",
       "1 adet orta boy soğan",
       "2 yemek kaşığı tereyağı",
@@ -901,8 +901,8 @@
       "1 çay kaşığı karabiber",
       "2 yemek kaşığı krema",
       "2 yemek kaşığı ince kıyılmış maydanoz"
-  ],
-  "instructions": [
+    ],
+    "instructions": [
       "Domatesleri soyup doğrayın.",
       "Soğanı doğrayın.",
       "Tereyağını bir tencerede eritin.",
@@ -915,43 +915,43 @@
       "Tencereyi ocağa alıp krema ekleyin.",
       "Kısık ateşte 5 dakika daha pişirin.",
       "Servis yaparken üzerine ince kıyılmış maydanoz serpin."
-  ],
-  "image": "https://www.example.com/images/domates-corba.jpg"
-},
-{
-  "id": 29,
-  "title": "Cevizli Biber Dolması",
-  "foodTitle": "vegetable",
-  "cookTime": "60 dk",
-  "ingredients": [
-  "10 adet dolmalık yeşil biber",
-  "1 su bardağı pirinç",
-  "1 adet orta boy kuru soğan",
-  "1 adet domates",
-  "1 yemek kaşığı biber salçası",
-  "1/2 su bardağı ceviz içi",
-  "1 çay kaşığı karabiber",
-  "1 çay kaşığı pul biber",
-  "1 çay kaşığı tuz",
-  "2 yemek kaşığı zeytinyağı",
-  "2 su bardağı su"
-  ],
-  "instructions": [
-  "Biberlerin saplarını kesin, içlerini çıkarın ve yıkayın.",
-  "Pirinçleri yıkayın ve süzün.",
-  "Kuru soğanı yemeklik doğrayın.",
-  " Domatesi küp küp doğrayın.",
-  "Bir tencereye zeytinyağı alıp kızdırın.",
-  "Soğanları ekleyip pembeleştirin.",
-  "Salçayı ekleyip kavurun.",
-  "Domatesleri, pirinci ve cevizleri ekleyip karıştırın.",
-  "Tuz, karabiber ve pul biber ekleyip karıştırın.",
-  "Biberlerin içini hazırladığınız harç ile doldurun.",
-  "Dolmaları tencereye dizin ve suyu ekleyin.",
-  "Kısık ateşte dolmalar pişene kadar yaklaşık 30-40 dakika pişirin.",
-  "Servis yapın."
-  ],
-  "image": "https://www.example.com/images/cevizli-biber-dolmasi.jpg"
+    ],
+    "image": "https://www.example.com/images/domates-corba.jpg"
+  },
+  {
+    "id": 29,
+    "title": "Cevizli Biber Dolması",
+    "foodTitle": "vegetable",
+    "cookTime": "60 dk",
+    "ingredients": [
+      "10 adet dolmalık yeşil biber",
+      "1 su bardağı pirinç",
+      "1 adet orta boy kuru soğan",
+      "1 adet domates",
+      "1 yemek kaşığı biber salçası",
+      "1/2 su bardağı ceviz içi",
+      "1 çay kaşığı karabiber",
+      "1 çay kaşığı pul biber",
+      "1 çay kaşığı tuz",
+      "2 yemek kaşığı zeytinyağı",
+      "2 su bardağı su"
+    ],
+    "instructions": [
+      "Biberlerin saplarını kesin, içlerini çıkarın ve yıkayın.",
+      "Pirinçleri yıkayın ve süzün.",
+      "Kuru soğanı yemeklik doğrayın.",
+      " Domatesi küp küp doğrayın.",
+      "Bir tencereye zeytinyağı alıp kızdırın.",
+      "Soğanları ekleyip pembeleştirin.",
+      "Salçayı ekleyip kavurun.",
+      "Domatesleri, pirinci ve cevizleri ekleyip karıştırın.",
+      "Tuz, karabiber ve pul biber ekleyip karıştırın.",
+      "Biberlerin içini hazırladığınız harç ile doldurun.",
+      "Dolmaları tencereye dizin ve suyu ekleyin.",
+      "Kısık ateşte dolmalar pişene kadar yaklaşık 30-40 dakika pişirin.",
+      "Servis yapın."
+    ],
+    "image": "https://www.example.com/images/cevizli-biber-dolmasi.jpg"
   },
   {
     "id": 30,
@@ -959,41 +959,42 @@
     "foodTitle": "dessert",
     "cookTime": "40 dk",
     "ingredients": [
-    "250 gram tereyağı",
-    "1 su bardağı pudra şekeri",
-    "3 su bardağı un",
-    "1 paket vanilya",
-    "2 adet yumurta sarısı",
-    "1 çay kaşığı kabartma tozu",
-    "1 çay bardağı sıvı yağ",
-    "1 su bardağı şeker",
-    "2 su bardağı su"
+      "250 gram tereyağı",
+      "1 su bardağı pudra şekeri",
+      "3 su bardağı un",
+      "1 paket vanilya",
+      "2 adet yumurta sarısı",
+      "1 çay kaşığı kabartma tozu",
+      "1 çay bardağı sıvı yağ",
+      "1 su bardağı şeker",
+      "2 su bardağı su"
     ],
     "instructions": [
-    "Tereyağını oda sıcaklığında bekletin.",
-    "Tereyağı ve pudra şekerini yoğurma kabına alıp karıştırın.",
-    "Un, vanilya, yumurta sarıları ve kabartma tozunu ekleyip yoğurun.",
-    "Hamurdan ceviz büyüklüğünde parçalar koparıp yuvarlayın ve yağlanmış fırın tepsisine dizin.",
-    "Önceden ısıtılmış 180 derece fırında hafif pembeleşene kadar pişirin.",
-    "Şeker ve suyu tencereye alıp karıştırarak kaynatın.",
-    "Kaynayan şerbeti ocaktan alıp soğuması için bekletin.",
-    "Fırından çıkan şekerparelerin üzerine soğuk şerbeti dökün.",
-    "Bir süre dinlendikten sonra servis yapın."
+      "Tereyağını oda sıcaklığında bekletin.",
+      "Tereyağı ve pudra şekerini yoğurma kabına alıp karıştırın.",
+      "Un, vanilya, yumurta sarıları ve kabartma tozunu ekleyip yoğurun.",
+      "Hamurdan ceviz büyüklüğünde parçalar koparıp yuvarlayın ve yağlanmış fırın tepsisine dizin.",
+      "Önceden ısıtılmış 180 derece fırında hafif pembeleşene kadar pişirin.",
+      "Şeker ve suyu tencereye alıp karıştırarak kaynatın.",
+      "Kaynayan şerbeti ocaktan alıp soğuması için bekletin.",
+      "Fırından çıkan şekerparelerin üzerine soğuk şerbeti dökün.",
+      "Bir süre dinlendikten sonra servis yapın."
     ],
     "image": "https://www.example.com/images/sekerpare.jpg"
-    },{
-      "id": 31,
-      "title": "Et Kavurma",
-      "foodTitle": "main",
-      "cookTime": "60 dk",
-      "ingredients": [
+  },
+  {
+    "id": 31,
+    "title": "Et Kavurma",
+    "foodTitle": "main",
+    "cookTime": "60 dk",
+    "ingredients": [
       "1 kg dana eti",
       "2 adet kuru soğan",
       "3 yemek kaşığı sıvı yağ",
       "Tuz",
       "Karabiber"
-      ],
-      "instructions": [
+    ],
+    "instructions": [
       "Eti yıkayıp küçük parçalara kesin.",
       "Tencereye sıvı yağı alın ve kızdırın.",
       "Kuru soğanları ince ince doğrayın ve yağda kavurun.",
@@ -1001,169 +1002,172 @@
       "Tuz ve karabiberi ekleyin.",
       "Orta ateşte, ara sıra karıştırarak etler suyunu salıp çekene kadar kavurun.",
       "Sıcak servis yapın."
-      ],
-      "image": "https://www.example.com/images/et-kavurma.jpg"
-      },{
-        "id": 32,
-        "title": "Etli Güveç",
-        "foodTitle": "main course",
-        "cookTime": "120 dk",
-        "ingredients": [
-        "500 gram kuşbaşı et",
-        "2 adet patlıcan",
-        "2 adet kabak",
-        "2 adet domates",
-        "1 adet kuru soğan",
-        "4 diş sarımsak",
-        "2 yemek kaşığı biber salçası",
-        "2 yemek kaşığı domates salçası",
-        "2 yemek kaşığı zeytinyağı",
-        "Tuz",
-        "Karabiber",
-        "Pul biber",
-        "1 su bardağı su"
-        ],
-        "instructions": [
-        "Patlıcanları soyup küp şeklinde doğrayın ve tuzlu suda bekletin.",
-        "Kabakları yıkayıp küp şeklinde doğrayın.",
-        "Soğanı ve sarımsakları ince ince doğrayın.",
-        "Domatesleri küp şeklinde doğrayın.",
-        "Geniş bir tencereye zeytinyağını alıp kızdırın.",
-        "Soğan ve sarımsakları ekleyip kavurun.",
-        "Kuşbaşı etleri ekleyip suyunu çekene kadar kavurun.",
-        "Salçaları ekleyip karıştırın.",
-        "Doğranmış patlıcanları ve kabakları ekleyin ve karıştırın.",
-        "Tuz, karabiber ve pul biber ekleyin.",
-        "Domatesleri ekleyip karıştırın.",
-        "1 su bardağı su ekleyin ve karıştırın.",
-        "Kısık ateşte pişirin.",
-        "Güveç kaplarına paylaştırın ve önceden ısıtılmış 180 derece fırında üzeri kızarana kadar pişirin.",
-        "Sıcak servis yapın."
-        ],
-        "image": "https://www.example.com/images/etli-guvec.jpg"
-        },{
-          "id": 33,
-          "title": "Bulgur Pilavı",
-          "foodTitle": "main dish",
-          "cookTime": "30 dk",
-          "ingredients": [
-          "2 su bardağı ince bulgur",
-          "2 yemek kaşığı tereyağı",
-          "2 yemek kaşığı sıvı yağ",
-          "1 adet orta boy soğan",
-          "2 su bardağı sıcak su",
-          "Tuz"
-          ],
-          "instructions": [
-          "Bir tencereye tereyağı ve sıvı yağı alın ve eritin.",
-          "Soğanı küçük küçük doğrayın ve yağın içine ekleyin. Kısık ateşte soğanlar pembeleşinceye kadar kavurun.",
-          "Bulguru ekleyin ve 2-3 dakika daha kavurun.",
-          "Sıcak suyu tencereye ilave edin ve tuzunu ekleyin. Bir defa karıştırın ve tencerenin kapağını kapatın.",
-          "Ocağın altını kısın ve bulgur suyunu çekene kadar pişirin. (Yaklaşık 15-20 dakika)",
-          "Pilavın demlenmesi için 10 dakika kadar bekletin ve servis yapın."
-          ],
-          "image": "https://www.example.com/images/bulgurpilavi.jpg"
-          },
-          {
-            "id": 34,
-            "title": "Kabak Dolması",
-            "foodTitle": "main dish",
-            "cookTime": "60 dk",
-            "ingredients": [
-            "6 adet kabak",
-            "1 su bardağı pirinç",
-            "2 adet kuru soğan",
-            "1 yemek kaşığı biber salçası",
-            "1 yemek kaşığı domates salçası",
-            "1 yemek kaşığı tereyağı",
-            "1 yemek kaşığı sıvı yağ",
-            "1 yemek kaşığı nane",
-            "Tuz, karabiber, pul biber",
-            "2 su bardağı sıcak su"
-            ],
-            "instructions": [
-            "Kabakların üzerini kapatacak kadar kapak kısmını kesin ve içini oyup çıkartın.",
-            "Pirinçleri yıkayın ve süzgece alın.",
-            "Bir tencereye sıvı yağı, tereyağını ve yemeklik doğranmış kuru soğanları alarak kavurun.",
-            "Ardından salçaları ekleyin ve birkaç dakika daha kavurun.",
-            "Pirinçleri ilave edip, tuz ve baharatları da ekleyerek karıştırın.",
-            "Bir süre daha kavurduktan sonra ocaktan alın ve soğumaya bırakın.",
-            "Soğuyan harçtan kabakların içini doldurun ve kabakların ağzını kapatın.",
-            "Bir tencereye kabakları yerleştirin ve üzerine sıcak su ilave edin.",
-            "Tencerenin kapağını kapatıp orta ateşte yaklaşık 40 dakika pişirin.",
-            "Pişen kabakları servis tabağına alın ve üzerine nane serperek servis yapın."
-            ],
-            "image": "https://www.example.com/images/kabakdolmasi.jpg"
-            },{
-              "id": 35,
-              "title": "Taze Fasulye",
-              "foodTitle": "main",
-              "cookTime": "40 dk",
-              "ingredients": [
-                  "500 gram taze fasulye",
-                  "1 adet kuru soğan",
-                  "2 adet domates",
-                  "3 yemek kaşığı sıvı yağ",
-                  "1 tatlı kaşığı tuz",
-                  "1 çay kaşığı karabiber"
-              ],
-              "instructions": [
-                  "Taze fasulyelerin uç kısımlarını kesip yıkayın.",
-                  "Kuru soğanı yemeklik doğrayın.",
-                  "Domatesleri rendeleyin.",
-                  "Bir tencereye sıvı yağ ekleyin.",
-                  "Soğanları tencereye alın ve kavurun.",
-                  "Rendelenmiş domatesleri de ekleyin ve 5 dakika kadar pişirin.",
-                  "Daha sonra taze fasulyeleri de tencereye ekleyin ve karıştırın.",
-                  "Tuz ve karabiberi de ilave edin.",
-                  "Tencereye 1,5 su bardağı su ekleyin ve kapağını kapatın.",
-                  "Kısık ateşte 30 dakika kadar pişirin.",
-                  "Taze fasulye yemeği servise hazır."
-              ],
-              "image": "https://www.example.com/images/taze-fasulye.jpg"
-          },
-          {
-            "id": 36,
-            "title": "Tarhana Çorbası",
-            "foodTitle": "soup",
-            "cookTime": "1 saat",
-            "ingredients": [
-            "1 su bardağı tarhana",
-            "6 su bardağı su",
-            "2 su bardağı et suyu veya tavuk suyu",
-            "1 yemek kaşığı tereyağı",
-            "1 çay kaşığı kırmızı pul biber",
-            "Tuz"
-            ],
-            "instructions": [
-            "Bir tencereye tarhana ve suyu alıp karıştırın. Karışımı 5-10 dakika boyunca karıştırarak pişirin.",
-            "Et suyunu veya tavuk suyunu ekleyin, karıştırın ve kaynatın.",
-            "Bir tavada tereyağını eritin ve kırmızı pul biberi ilave edin.",
-            "Tereyağı karışımını çorbaya ekleyin ve tuzunu ayarlayın.",
-            "Birkaç dakika daha kaynatın ve sıcak servis yapın."
-            ],
-            "image": "https://www.example.com/images/tarhana-corbasi.jpg"
-            },
-            {
-              "id": 37,
-              "title": "Muhallebi Tatlısı",
-              "foodTitle": "dessert",
-              "cookTime": "30 dk",
-              "ingredients": [
-                "1 litre süt",
-                "1 su bardağı şeker",
-                "1 su bardağı un",
-                "1 paket vanilya",
-                "1 yemek kaşığı tereyağı",
-                "1 yemek kaşığı nişasta"
-              ],
-              "instructions": [
-                "Tencereye sütü, şekeri, unu ve vanilyayı ekleyin. Orta ateşte sürekli karıştırarak pişirin.",
-                "Muhallebi kıvamına gelince tereyağı ve nişastayı ekleyin ve birkaç dakika daha karıştırarak pişirin.",
-                "Muhallebiyi kaselere boşaltın ve oda sıcaklığında soğumaya bırakın.",
-                "Soğuduktan sonra buzdolabında 2-3 saat bekletin.",
-                "Servis yaparken üzerini istediğiniz şekilde süsleyebilirsiniz."
-              ],
-              "image": "https://www.example.com/images/muhallebi-tatlisi.jpg"
-            }       
+    ],
+    "image": "https://www.example.com/images/et-kavurma.jpg"
+  },
+  {
+    "id": 32,
+    "title": "Etli Güveç",
+    "foodTitle": "main course",
+    "cookTime": "120 dk",
+    "ingredients": [
+      "500 gram kuşbaşı et",
+      "2 adet patlıcan",
+      "2 adet kabak",
+      "2 adet domates",
+      "1 adet kuru soğan",
+      "4 diş sarımsak",
+      "2 yemek kaşığı biber salçası",
+      "2 yemek kaşığı domates salçası",
+      "2 yemek kaşığı zeytinyağı",
+      "Tuz",
+      "Karabiber",
+      "Pul biber",
+      "1 su bardağı su"
+    ],
+    "instructions": [
+      "Patlıcanları soyup küp şeklinde doğrayın ve tuzlu suda bekletin.",
+      "Kabakları yıkayıp küp şeklinde doğrayın.",
+      "Soğanı ve sarımsakları ince ince doğrayın.",
+      "Domatesleri küp şeklinde doğrayın.",
+      "Geniş bir tencereye zeytinyağını alıp kızdırın.",
+      "Soğan ve sarımsakları ekleyip kavurun.",
+      "Kuşbaşı etleri ekleyip suyunu çekene kadar kavurun.",
+      "Salçaları ekleyip karıştırın.",
+      "Doğranmış patlıcanları ve kabakları ekleyin ve karıştırın.",
+      "Tuz, karabiber ve pul biber ekleyin.",
+      "Domatesleri ekleyip karıştırın.",
+      "1 su bardağı su ekleyin ve karıştırın.",
+      "Kısık ateşte pişirin.",
+      "Güveç kaplarına paylaştırın ve önceden ısıtılmış 180 derece fırında üzeri kızarana kadar pişirin.",
+      "Sıcak servis yapın."
+    ],
+    "image": "https://www.example.com/images/etli-guvec.jpg"
+  },
+  {
+    "id": 33,
+    "title": "Bulgur Pilavı",
+    "foodTitle": "main dish",
+    "cookTime": "30 dk",
+    "ingredients": [
+      "2 su bardağı ince bulgur",
+      "2 yemek kaşığı tereyağı",
+      "2 yemek kaşığı sıvı yağ",
+      "1 adet orta boy soğan",
+      "2 su bardağı sıcak su",
+      "Tuz"
+    ],
+    "instructions": [
+      "Bir tencereye tereyağı ve sıvı yağı alın ve eritin.",
+      "Soğanı küçük küçük doğrayın ve yağın içine ekleyin. Kısık ateşte soğanlar pembeleşinceye kadar kavurun.",
+      "Bulguru ekleyin ve 2-3 dakika daha kavurun.",
+      "Sıcak suyu tencereye ilave edin ve tuzunu ekleyin. Bir defa karıştırın ve tencerenin kapağını kapatın.",
+      "Ocağın altını kısın ve bulgur suyunu çekene kadar pişirin. (Yaklaşık 15-20 dakika)",
+      "Pilavın demlenmesi için 10 dakika kadar bekletin ve servis yapın."
+    ],
+    "image": "https://www.example.com/images/bulgurpilavi.jpg"
+  },
+  {
+    "id": 34,
+    "title": "Kabak Dolması",
+    "foodTitle": "main dish",
+    "cookTime": "60 dk",
+    "ingredients": [
+      "6 adet kabak",
+      "1 su bardağı pirinç",
+      "2 adet kuru soğan",
+      "1 yemek kaşığı biber salçası",
+      "1 yemek kaşığı domates salçası",
+      "1 yemek kaşığı tereyağı",
+      "1 yemek kaşığı sıvı yağ",
+      "1 yemek kaşığı nane",
+      "Tuz, karabiber, pul biber",
+      "2 su bardağı sıcak su"
+    ],
+    "instructions": [
+      "Kabakların üzerini kapatacak kadar kapak kısmını kesin ve içini oyup çıkartın.",
+      "Pirinçleri yıkayın ve süzgece alın.",
+      "Bir tencereye sıvı yağı, tereyağını ve yemeklik doğranmış kuru soğanları alarak kavurun.",
+      "Ardından salçaları ekleyin ve birkaç dakika daha kavurun.",
+      "Pirinçleri ilave edip, tuz ve baharatları da ekleyerek karıştırın.",
+      "Bir süre daha kavurduktan sonra ocaktan alın ve soğumaya bırakın.",
+      "Soğuyan harçtan kabakların içini doldurun ve kabakların ağzını kapatın.",
+      "Bir tencereye kabakları yerleştirin ve üzerine sıcak su ilave edin.",
+      "Tencerenin kapağını kapatıp orta ateşte yaklaşık 40 dakika pişirin.",
+      "Pişen kabakları servis tabağına alın ve üzerine nane serperek servis yapın."
+    ],
+    "image": "https://www.example.com/images/kabakdolmasi.jpg"
+  },
+  {
+    "id": 35,
+    "title": "Taze Fasulye",
+    "foodTitle": "main",
+    "cookTime": "40 dk",
+    "ingredients": [
+      "500 gram taze fasulye",
+      "1 adet kuru soğan",
+      "2 adet domates",
+      "3 yemek kaşığı sıvı yağ",
+      "1 tatlı kaşığı tuz",
+      "1 çay kaşığı karabiber"
+    ],
+    "instructions": [
+      "Taze fasulyelerin uç kısımlarını kesip yıkayın.",
+      "Kuru soğanı yemeklik doğrayın.",
+      "Domatesleri rendeleyin.",
+      "Bir tencereye sıvı yağ ekleyin.",
+      "Soğanları tencereye alın ve kavurun.",
+      "Rendelenmiş domatesleri de ekleyin ve 5 dakika kadar pişirin.",
+      "Daha sonra taze fasulyeleri de tencereye ekleyin ve karıştırın.",
+      "Tuz ve karabiberi de ilave edin.",
+      "Tencereye 1,5 su bardağı su ekleyin ve kapağını kapatın.",
+      "Kısık ateşte 30 dakika kadar pişirin.",
+      "Taze fasulye yemeği servise hazır."
+    ],
+    "image": "https://www.example.com/images/taze-fasulye.jpg"
+  },
+  {
+    "id": 36,
+    "title": "Tarhana Çorbası",
+    "foodTitle": "soup",
+    "cookTime": "1 saat",
+    "ingredients": [
+      "1 su bardağı tarhana",
+      "6 su bardağı su",
+      "2 su bardağı et suyu veya tavuk suyu",
+      "1 yemek kaşığı tereyağı",
+      "1 çay kaşığı kırmızı pul biber",
+      "Tuz"
+    ],
+    "instructions": [
+      "Bir tencereye tarhana ve suyu alıp karıştırın. Karışımı 5-10 dakika boyunca karıştırarak pişirin.",
+      "Et suyunu veya tavuk suyunu ekleyin, karıştırın ve kaynatın.",
+      "Bir tavada tereyağını eritin ve kırmızı pul biberi ilave edin.",
+      "Tereyağı karışımını çorbaya ekleyin ve tuzunu ayarlayın.",
+      "Birkaç dakika daha kaynatın ve sıcak servis yapın."
+    ],
+    "image": "https://www.example.com/images/tarhana-corbasi.jpg"
+  },
+  {
+    "id": 37,
+    "title": "Muhallebi Tatlısı",
+    "foodTitle": "dessert",
+    "cookTime": "30 dk",
+    "ingredients": [
+      "1 litre süt",
+      "1 su bardağı şeker",
+      "1 su bardağı un",
+      "1 paket vanilya",
+      "1 yemek kaşığı tereyağı",
+      "1 yemek kaşığı nişasta"
+    ],
+    "instructions": [
+      "Tencereye sütü, şekeri, unu ve vanilyayı ekleyin. Orta ateşte sürekli karıştırarak pişirin.",
+      "Muhallebi kıvamına gelince tereyağı ve nişastayı ekleyin ve birkaç dakika daha karıştırarak pişirin.",
+      "Muhallebiyi kaselere boşaltın ve oda sıcaklığında soğumaya bırakın.",
+      "Soğuduktan sonra buzdolabında 2-3 saat bekletin.",
+      "Servis yaparken üzerini istediğiniz şekilde süsleyebilirsiniz."
+    ],
+    "image": "https://www.example.com/images/muhallebi-tatlisi.jpg"
+  }
 ]

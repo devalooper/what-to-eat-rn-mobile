@@ -30,7 +30,7 @@ import { PopulerIngredients } from "@/store/DummyData/Tags";
 import { LinkButton } from "@/components/LinkButton"
 import { randomColor } from "@/utils";
 import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-native"
-import React, { useState, useReducer, useEffect } from "react";
+import React, { useState, useReducer, useEffect, useMemo } from "react";
 import shortid from "shortid";
 
 import { Stack, Container, Box, Flex, Badge, HStack } from "native-base"
@@ -42,29 +42,38 @@ import { Link } from "@react-navigation/native"
 
 export function Home() {
   const [input, setInput] = useState("");
-  const [tags, dispatch] = useReducer(ingredientTagReducer, []);
-
   const [popularTags, setPopularTags] = useState(PopulerIngredients);
   const [isError, setIsError] = useState({ status: false, message: "" })
+
+  const [tags, dispatch] = useReducer(ingredientTagReducer, []);
+  const filteredTags = useMemo(() => popularTags.filter((p) => p.name.toLowerCase().includes(input.toLowerCase())), [input])
 
   const removeTag = (id) => dispatch({ type: INGREDIENT_TAG.REMOVE_TAG, payload: id })
   const addTag = () => {
     if (!input ||
-      tags.find((tag) => (tag.name.toLocaleLowerCase() === input.toLocaleLowerCase()))
+      tags.find((tag) => (tag.name.toLowerCase() === input.toLowerCase()))
     ) return;
 
-    dispatch({
-      type: INGREDIENT_TAG.ADD_TAG, payload: {
-        name: input,
-        id: shortid.generate()
-      }
-    })
-    setInput("");
+
+    if (filteredTags.find((tag) => tag.name.toLowerCase() === input.toLowerCase())) {
+      dispatch({
+        type: INGREDIENT_TAG.ADD_TAG, payload: {
+          name: input,
+          id: shortid.generate()
+        }
+      })
+      setInput("");
+    }
+    else {
+      setIsError({
+        status: true,
+        message: "Please select from the list"
+      })
+    }
   }
 
   const addExampleTag = (exampleTag) => {
-    // if(tags.includes((tag: Tag) => tag.name === exampleTag.name.toLocaleLowerCase())) return
-    if (tags.find((tag) => tag.name.toLocaleLowerCase() == exampleTag.name.toLocaleLowerCase())) return
+    if (tags.find((tag) => tag.name.toLowerCase() == exampleTag.name.toLowerCase())) return
     dispatch({
       type: INGREDIENT_TAG.ADD_TAG,
       payload: {
@@ -72,24 +81,34 @@ export function Home() {
         id: shortid.generate()
       }
     })
-
   }
 
+  //TODO: fix re-filter when delete input
   useEffect(() => {
-    if (tags.find((tag) => (tag.name.toLocaleLowerCase() === input.toLocaleLowerCase())))
+    if (!input) return
+
+    if (tags.find((tag) => (tag.name.toLowerCase() === input.toLowerCase()))) {
       setIsError({
         status: true,
         message: "This ingredient already exists"
       })
-    else setIsError({
+    } else setIsError({
       status: false,
       message: ""
     })
+
+    setPopularTags(filteredTags)
+
+    return () => {
+      setPopularTags(PopulerIngredients.filter((exampleTag) => {
+        return !tags.find((tag) => tag.name.toLowerCase() !== exampleTag.name.toLowerCase())
+      }))
+    }
   }, [input])
 
   useEffect(() => {
     setPopularTags(PopulerIngredients.filter((exampleTag) => {
-      return !tags.find((tag) => tag.name.toLocaleLowerCase() === exampleTag.name.toLocaleLowerCase())
+      return !tags.find((tag) => tag.name.toLowerCase() === exampleTag.name.toLowerCase())
     }))
   }, [tags])
 

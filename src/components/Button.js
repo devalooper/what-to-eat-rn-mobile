@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { typography } from '@/theme';
+import { NavigationContainer } from '@react-navigation/native';
 
 const styles = StyleSheet.create({
   button: {

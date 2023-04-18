@@ -27,8 +27,9 @@
 import { INGREDIENT_TAG } from "@/constants";
 import { ingredientTagReducer } from "@/reducers/IngredientTagReducer";
 import { PopulerIngredients } from "@/store/DummyData/Tags";
+import { LinkButton } from "@/components/LinkButton"
 import { randomColor } from "@/utils";
-import { ScrollView, StyleSheet, View, Text, Button, TextInput, Pressable } from "react-native"
+import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-native"
 import React, { useState, useReducer, useEffect } from "react";
 import shortid from "shortid";
 
@@ -109,7 +110,7 @@ export function Home() {
       <Box>
         <ScrollView>
           <HStack direction="row" flexWrap="wrap" m={4} space={2} >
-            {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} />)}
+            {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
           </HStack>
         </ScrollView>
         {
@@ -117,7 +118,7 @@ export function Home() {
             <Text variant="caption">Populer Ingredients</Text>
             <ScrollView>
               <HStack direction="row" flexWrap="wrap" mb="2.5" m={4} space={2} >
-                {popularTags.map((tag) => <Tag actionType={"ADD_TAG"} tag={tag} action={addExampleTag} />)}
+                {popularTags.map((tag) => <Tag actionType={"ADD_TAG"} tag={tag} action={addExampleTag} key={tag.id} />)}
               </HStack>
             </ScrollView>
           </Box>
@@ -128,11 +129,13 @@ export function Home() {
           <Text style={{ position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red" }}>{isError?.message}</Text>
         </Box>
       }
-      <Link
-        to={{ screen: "Suggestions Screen", params: { tags } }}
+      {/* <Link
+        to={ }
         style={{ marginTop: 8, fontSize: 16, fontWeight: "bold", color: "red", padding: 8, backgroundColor: "blue", textAlign: "center" }}>
-        Seach
-      </Link>
+      </Link> */}
+
+      <LinkButton to={{ screen: "Suggestions Screen", params: { tags } }} title={"Search"} />
+
     </Box>
   )
 }

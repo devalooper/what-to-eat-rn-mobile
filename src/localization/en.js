@@ -4,9 +4,18 @@ export const en = {
     connectionError: 'Connection error',
   },
   home: {
-    header: 'Home',
+    header: 'My Ingredients',
     message: 'Welcome',
     variant: 'App variant: ',
+    search: 'What to Eat ?',
+    popularIngredientsTitle: "Popular Ingredients",
+    infoText: "Please enter available ingredients.",
+    warningText: "Please select from the list",
+    existingIngredient: "This ingredient already exists",
+    placeholder: "Ex: Tomato, Onion, Garlic, Olive Oil, Salt, Pepper, etc."
+  },
+  recipes: {
+
   },
   login: {
     username: 'Username',
@@ -21,4 +30,20 @@ export const en = {
     logout: 'Logout',
     message: 'This screen has the iOS native large header.',
   },
+  popularIngredients: {
+    pepper: 'Pepper',
+    salt: 'Salt',
+    onion: 'Onion',
+    garlic: 'Garlic',
+    tomato: 'Tomato',
+    potato: 'Potato',
+    meat: 'Meat',
+    chicken: 'Chicken',
+    beef: 'Beef',
+    pork: 'Pork',
+    fish: 'Fish',
+    egg: 'Egg',
+    milk: 'Milk',
+    cheese: 'Cheese',
+  }
 };

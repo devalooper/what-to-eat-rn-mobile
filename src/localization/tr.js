@@ -4,9 +4,15 @@ export const tr = {
     connectionError: 'Bağlantı hatası',
   },
   home: {
-    header: 'Ana Sayfa',
+    header: 'Malzemelerim',
     message: 'Hoşgeldiniz',
     variant: 'Uygulama sürümü: ',
+    search: 'Ne Yemeli ?',
+    popularIngredientsTitle: "Popüler Malzemeler",
+    infoText: "Lütfen mevcut malzemelerinizi giriniz.",
+    warningText: "Lütfen listeden seçiniz",
+    existingIngredient: "Bu malzeme zaten mevcut",
+    placeholder: "Örnek: Domates, Soğan, Sarımsak, Zeytin Yağı, Tuz, Karabiber, vb."
   },
   login: {
     username: 'Kullanıcı Adı',
@@ -21,4 +27,20 @@ export const tr = {
     logout: 'Çıkış',
     message: 'Bu ekran iOS native büyük başlık özelliğine sahiptir.',
   },
+  popularIngredients: {
+    pepper: 'Karabiber',
+    salt: 'Tuz',
+    onion: 'Soğan',
+    garlic: 'Sarımsak',
+    tomato: 'Domates',
+    potato: 'Patates',
+    meat: 'Et',
+    chicken: 'Tavuk',
+    beef: 'Kırmızı Et',
+    pork: 'Domuz Et',
+    fish: 'Balık',
+    egg: 'Yumurta',
+    milk: 'Süt',
+    cheese: 'Peynir',
+  }
 };

@@ -7,7 +7,7 @@ import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-
 import React, { useState, useReducer, useEffect, useMemo, useCallback } from "react";
 import shortid from "shortid";
 
-import { Stack, Container, Box, Flex, Badge, HStack } from "native-base"
+import { Stack, Container, Box, Flex, Badge, HStack, Image } from "native-base"
 import { Link } from "@react-navigation/native"
 
 import { typography } from '@/theme';
@@ -26,7 +26,7 @@ export function Home() {
   const [isError, setIsError] = useState({ status: false, message: "" })
 
   const { colors } = useTheme();
-  const user = useSelector(getUser);
+  // const user = useSelector(getUser);
 
   const [tags, dispatch] = useReducer(ingredientTagReducer, []);
   const filteredTags = useMemo(() => popularTags.filter((p) => p.name.toLowerCase().includes(input.toLowerCase())), [input])
@@ -61,6 +61,7 @@ export function Home() {
       type: INGREDIENT_TAG.ADD_TAG,
       payload: {
         name: exampleTag.name,
+        image: exampleTag.image,
         id: shortid.generate()
       }
     })
@@ -108,11 +109,13 @@ export function Home() {
         placeholder={strings.home.placeholder}
       />
       <Text style={[typography.title, { color: colors.text }]}>{strings.home.infoText}</Text>
-      <Box>
+      <Box style={styles.wrapper}>
         <ScrollView>
-          <HStack direction="row" flexWrap="wrap" m={4} space={2} >
-            {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
-          </HStack>
+          <Box flex={1}>
+            <HStack direction="row" flexWrap="wrap" m={4} space={2} >
+              {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
+            </HStack>
+          </Box>
         </ScrollView>
         {
           popularTags.length > 0 && <Box >
@@ -136,15 +139,24 @@ export function Home() {
 }
 
 const Tag = React.memo(function Tag({ tag, actionType, action }) {
+  const { colors } = useTheme();
+
   const onPress = (id) => {
     if (actionType == "REMOVE_TAG") action(id)
     else if (actionType == "ADD_TAG") action(tag)
   }
 
+  console.log('image', tag.image)
+
   return (
     <Pressable onPress={() => onPress(tag.id)}>
       <Badge label={tag.name} colorScheme="success">
-        {tag.name}
+        <Image
+          size={6} 
+          borderRadius={100}
+          source={tag.image}
+         alt="Food Image" />
+        <Text style={[typography.title, { color: colors.text }]}>{tag.name}</Text>
       </Badge>
     </Pressable>
   )

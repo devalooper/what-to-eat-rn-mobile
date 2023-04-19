@@ -1,49 +1,32 @@
-// import { useTheme } from '@react-navigation/native';
-// import React from 'react';
-// import { Text, View } from 'react-native';
-// import { Config } from 'react-native-config';
-// import { useSelector } from 'react-redux';
-// import { strings } from '@/localization';
-// import { getUser } from '@/selectors/UserSelectors';
-// import { styles } from '@/screens/Home/Home.styles';
-// import { typography } from '@/theme';
-
-// export function Home() {
-//   const { colors } = useTheme();
-//   const user = useSelector(getUser);
-
-//   return (
-//     <View style={styles.container}>
-//       <Text style={[typography.title, { color: colors.text }]}>
-//         {strings.home.message} {user?.username}
-//       </Text>
-//       <Text style={[typography.text, { color: colors.text }]}>
-//         {strings.home.variant} {Config.BUILD_VARIANT}
-//       </Text>
-//     </View>
-//   );
-// }
-
 import { INGREDIENT_TAG } from "@/constants";
 import { ingredientTagReducer } from "@/reducers/IngredientTagReducer";
-import { PopulerIngredients } from "@/store/DummyData/Tags";
+import { getPopularIngredients } from "@/store/DummyData/Tags";
 import { LinkButton } from "@/components/LinkButton"
 import { randomColor } from "@/utils";
 import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-native"
-import React, { useState, useReducer, useEffect, useMemo } from "react";
+import React, { useState, useReducer, useEffect, useMemo, useCallback } from "react";
 import shortid from "shortid";
 
 import { Stack, Container, Box, Flex, Badge, HStack } from "native-base"
 import { Link } from "@react-navigation/native"
 
+import { typography } from '@/theme';
+import { getUser } from '@/selectors/UserSelectors';
+import { useTheme } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
+import { styles } from '@/screens/Home/Home.styles';
+import { strings } from '@/localization'
+// import { Config } from 'react-native-config';
 
-// import { Wrap, Snackbar, Chip } from "@react-native-material/core";
-
+const PopulerIngredients = getPopularIngredients()
 
 export function Home() {
   const [input, setInput] = useState("");
   const [popularTags, setPopularTags] = useState(PopulerIngredients);
   const [isError, setIsError] = useState({ status: false, message: "" })
+
+  const { colors } = useTheme();
+  const user = useSelector(getUser);
 
   const [tags, dispatch] = useReducer(ingredientTagReducer, []);
   const filteredTags = useMemo(() => popularTags.filter((p) => p.name.toLowerCase().includes(input.toLowerCase())), [input])
@@ -67,7 +50,7 @@ export function Home() {
     else {
       setIsError({
         status: true,
-        message: "Please select from the list"
+        message: strings.home.warningText
       })
     }
   }
@@ -83,32 +66,31 @@ export function Home() {
     })
   }
 
-  //TODO: fix re-filter when delete input
   useEffect(() => {
     if (!input) return
 
     if (tags.find((tag) => (tag.name.toLowerCase() === input.toLowerCase()))) {
       setIsError({
         status: true,
-        message: "This ingredient already exists"
+        message: strings.home.existingIngredient
       })
     } else setIsError({
       status: false,
       message: ""
     })
 
-    setPopularTags(filteredTags)
+    setPopularTags((oldPopularTags) => {
+      return oldPopularTags.filter((popularTag) => popularTag.name.toLowerCase().includes(input.toLowerCase() || !tags.find((tag) => tag.name.toLowerCase() === popularTag.name.toLowerCase())))
+    })
 
     return () => {
-      setPopularTags(PopulerIngredients.filter((exampleTag) => {
-        return !tags.find((tag) => tag.name.toLowerCase() !== exampleTag.name.toLowerCase())
-      }))
+      setPopularTags(PopulerIngredients)
     }
   }, [input])
 
   useEffect(() => {
-    setPopularTags(PopulerIngredients.filter((exampleTag) => {
-      return !tags.find((tag) => tag.name.toLowerCase() === exampleTag.name.toLowerCase())
+    setPopularTags(PopulerIngredients.filter((popularIngredient) => {
+      return !tags.find((tag) => tag.name.toLowerCase() === popularIngredient.name.toLowerCase())
     }))
   }, [tags])
 
@@ -123,9 +105,9 @@ export function Home() {
         onSubmitEditing={addTag}
         autoFocus={true}
         blurOnSubmit={false}
-        placeholder="Ex: [tomato, pepper, meat]"
+        placeholder={strings.home.placeholder}
       />
-      <Text>Please enter ingredients.</Text>
+      <Text style={[typography.title, { color: colors.text }]}>{strings.home.infoText}</Text>
       <Box>
         <ScrollView>
           <HStack direction="row" flexWrap="wrap" m={4} space={2} >
@@ -134,7 +116,7 @@ export function Home() {
         </ScrollView>
         {
           popularTags.length > 0 && <Box >
-            <Text variant="caption">Populer Ingredients</Text>
+            <Text variant="caption" style={[typography.title, { color: colors.text }]}>{strings.home.popularIngredientsTitle}</Text>
             <ScrollView>
               <HStack direction="row" flexWrap="wrap" mb="2.5" m={4} space={2} >
                 {popularTags.map((tag) => <Tag actionType={"ADD_TAG"} tag={tag} action={addExampleTag} key={tag.id} />)}
@@ -145,16 +127,10 @@ export function Home() {
       </Box>
       {
         isError.status && <Box>
-          <Text style={{ position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red" }}>{isError?.message}</Text>
+          <Text style={[typography.title, { position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red", color: colors.text }]}>{isError?.message}</Text>
         </Box>
       }
-      {/* <Link
-        to={ }
-        style={{ marginTop: 8, fontSize: 16, fontWeight: "bold", color: "red", padding: 8, backgroundColor: "blue", textAlign: "center" }}>
-      </Link> */}
-
-      <LinkButton to={{ screen: "Suggestions Screen", params: { tags } }} title={"Search"} />
-
+      <LinkButton to={{ screen: "Suggestions Screen", params: { tags } }} title={strings.home.search} />
     </Box>
   )
 }
@@ -175,52 +151,3 @@ const Tag = React.memo(function Tag({ tag, actionType, action }) {
 }, (prevProps, nextProps) => {
   return prevProps.tag.name === nextProps.tag.name
 })
-
-// const TagStyles = StyleSheet.create({
-//   container: {
-//     display: "flex",
-//     height: 40,
-//     justifyContent: "space-evenly",
-//     alignItems: "center",
-//     textAlign: "center",
-//     alignContent: "center",
-//     flexDirection: "row",
-//     borderRadius: 10,
-//     padding: 4,
-//     margin: 4,
-//   },
-//   wrapper: {
-//     maxWidth: "100%",
-//   },
-//   tagText: {
-//     fontSize: 18,
-//     fontWeight: "bold",
-//   },
-//   chip: {
-//     height: "100%",
-//   }
-// })
-
-// const TagInputStyle = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     display: "flex",
-//     flexDirection: "column",
-//   },
-//   wrapper: {
-//     flex: 1,
-//     minWidth: "100%",
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "flex-start",
-//     alignItems: "flex-start",
-//     textAlign: "center"
-//   },
-//   exampleContainer: {
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "flex-start",
-//     alignItems: "flex-start",
-//     textAlign: "center"
-//   }
-// })

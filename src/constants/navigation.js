@@ -1,5 +1,7 @@
+import { strings } from "@/localization";
+
 export const NAVIGATION = {
-  home: 'Home Screen',
+  home: strings.home.header,
   suggestions: 'Suggestions Screen',
   login: 'Login Screen',
   recipes: 'Recipes Screen',

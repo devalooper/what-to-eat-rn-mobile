@@ -4,7 +4,7 @@ export const en = {
     connectionError: 'Connection error',
   },
   home: {
-    header: 'My Ingredients',
+    header: 'What to Eat ?',
     message: 'Welcome',
     variant: 'App variant: ',
     search: 'What to Eat ?',
@@ -12,7 +12,8 @@ export const en = {
     infoText: "Please enter available ingredients.",
     warningText: "Please select from the list",
     existingIngredient: "This ingredient already exists",
-    placeholder: "Ex: Tomato, Onion, Garlic, Olive Oil, Salt, Pepper, etc."
+    placeholder: "Ex: Tomato, Onion, Garlic, Olive Oil, Salt, Pepper, etc.",
+    myIngredients: "My Ingredients",
   },
   recipes: {
 

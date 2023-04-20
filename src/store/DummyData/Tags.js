@@ -1,7 +1,7 @@
 import shortid from "shortid";
 import { strings } from '@/localization'
 
-const PopulerIngredientImages = {
+export const PopulerIngredientImages = {
   pepper: require('@/assets/ingredients/pepper.png'),
   salt: require('@/assets/ingredients/pepper.png'),
   onion: require('@/assets/ingredients/onion.png'),
@@ -19,11 +19,16 @@ const PopulerIngredientImages = {
   nullImage: require('@/assets/ingredients/pepper.png'),
 }
 
-export const getPopularIngredients = () => Object.keys(strings.popularIngredients).map((item) => {
+export const getPopularIngredients = () => {
+  const ingredients = []
 
-  return {
-    name: item,
-    image: PopulerIngredientImages[item],
-    id: shortid.generate()
+  for(const [key, value] of Object.entries(strings.popularIngredients)) {
+    ingredients.push({
+      name: value,
+      image: PopulerIngredientImages[key] || PopulerIngredientImages['tomato'],
+      id: shortid.generate()
+    })
   }
-})
+
+  return ingredients
+}

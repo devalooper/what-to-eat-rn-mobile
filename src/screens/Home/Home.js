@@ -1,8 +1,8 @@
 import { INGREDIENT_TAG } from "@/constants";
 import { ingredientTagReducer } from "@/reducers/IngredientTagReducer";
-import { getPopularIngredients } from "@/store/DummyData/Tags";
+import { getPopularIngredients, PopulerIngredientImages } from "@/store/DummyData/Tags";
 import { LinkButton, TextField } from "@/components/"
-import { upperCaseFirstLetter } from "@/utils";
+import { upperCaseFirstLetter, randomColor } from "@/utils";
 import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-native"
 import React, { useState, useReducer, useEffect, useMemo, useCallback } from "react";
 import shortid from "shortid";
@@ -39,11 +39,9 @@ export function Home() {
 
 
     if (filteredTags.find((tag) => tag.name.toLowerCase() === input.toLowerCase())) {
+      const ingredient = PopulerIngredients.find((ingredient) => ingredient.name.toLowerCase() === input.toLowerCase())
       dispatch({
-        type: INGREDIENT_TAG.ADD_TAG, payload: {
-          name: input,
-          id: shortid.generate()
-        }
+        type: INGREDIENT_TAG.ADD_TAG, payload: ingredient
       })
       setInput("");
     }
@@ -57,6 +55,7 @@ export function Home() {
 
   const addExampleTag = (exampleTag) => {
     if (tags.find((tag) => tag.name.toLowerCase() == exampleTag.name.toLowerCase())) return
+
     dispatch({
       type: INGREDIENT_TAG.ADD_TAG,
       payload: {
@@ -149,16 +148,14 @@ const Tag = React.memo(function Tag({ tag, actionType, action }) {
 
   return (
     <Pressable onPress={() => onPress(tag.id)}>
-      <Badge label={tag.name} colorScheme="success" style={styles.badge}>
-        <HStack space={1}>
-          <Image
-            size={6}
-            borderRadius={100}
-            source={tag.image}
-            alt="Food Image" />
-          <Text style={[typography.text, { color: colors.text }]}>{upperCaseFirstLetter(tag.name)}</Text>
-        </HStack>
-      </Badge>
+      <HStack space={1} label={tag.name} colorScheme="info" style={[styles.badge, {backgroundColor: randomColor()}]}>
+        <Image
+          size={6}
+          borderRadius={100}
+          source={tag.image}
+          alt="Food Image" />
+        <Text style={[typography.text, { color: colors.text }, styles.badgeText]}>{upperCaseFirstLetter(tag.name)}</Text>
+      </HStack>
     </Pressable>
   )
 }, (prevProps, nextProps) => {

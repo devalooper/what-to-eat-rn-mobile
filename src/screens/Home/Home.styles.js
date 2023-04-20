@@ -14,7 +14,9 @@ export const styles = StyleSheet.create({
   input: {
     borderRadius: 4,
     padding: 2,
-    paddingTop: 10,
+    marginTop: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
   tagContainer: {
     height: "40%",
@@ -27,6 +29,13 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 1,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: 'white',
+    padding: 2,
+  },
+  badgeText: {
+    color: 'white',
+    marginLeft: 1,
   }
 });

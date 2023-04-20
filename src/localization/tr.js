@@ -12,7 +12,7 @@ export const tr = {
     infoText: "Lütfen mevcut malzemelerinizi giriniz.",
     warningText: "Lütfen listeden seçiniz",
     existingIngredient: "Bu malzeme zaten mevcut",
-    placeholder: "Örnek: Domates, Soğan, Sarımsak, Zeytin Yağı, Tuz, Karabiber, vb.",
+    placeholder: "Örnek: Domates, Soğan, Sarımsak, vb.",
     myIngredients: "Malzemelerim",
   },
   login: {

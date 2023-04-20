@@ -7,9 +7,9 @@ import { spacing } from '@/theme';
 const styles = StyleSheet.create({
   container: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    paddingBottom: spacing.xs,
-    paddingTop: spacing.m,
-    marginBottom: spacing.s,
+    paddingBottom: spacing.xxs,
+    paddingTop: spacing.xxs,
+    marginTop: spacing.xs,
   },
   input: {
     paddingHorizontal: spacing.xs,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export function TextField({ onBlur, onFocus, placeholder, value, ...rest }) {
+export function TextField({ onBlur, onFocus, placeholder, value, style, ...rest }) {
   const animation = useSharedValue(0);
   const [labelWidth, setLabelWidth] = useState(0);
 
@@ -63,7 +63,7 @@ export function TextField({ onBlur, onFocus, placeholder, value, ...rest }) {
       <TextInput
         onBlur={handleBlur}
         onFocus={handleFocus}
-        style={styles.input}
+        style={[styles.input, style]}
         value={value}
         {...rest}
       />

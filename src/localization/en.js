@@ -15,6 +15,9 @@ export const en = {
     placeholder: "Ex: Tomato, Onion, Garlic, etc.",
     myIngredients: "My Ingredients",
   },
+  suggestions: {
+    header: 'Suggestions',
+  },
   recipes: {},
   calculator: {},
   login: {

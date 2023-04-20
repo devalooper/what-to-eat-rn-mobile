@@ -15,6 +15,9 @@ export const tr = {
     placeholder: "Örnek: Domates, Soğan, Sarımsak, vb.",
     myIngredients: "Malzemelerim",
   },
+  suggestions: {
+    header: 'Öneriler',
+  },
   recipes: {},
   calculator: {},
   login: {

@@ -1,13 +1,13 @@
 import { INGREDIENT_TAG } from "@/constants";
 import { ingredientTagReducer } from "@/reducers/IngredientTagReducer";
 import { getPopularIngredients } from "@/store/DummyData/Tags";
-import { LinkButton } from "@/components/LinkButton"
-import { randomColor } from "@/utils";
+import { LinkButton, TextField } from "@/components/"
+import { upperCaseFirstLetter } from "@/utils";
 import { ScrollView, StyleSheet, View, Text, TextInput, Pressable } from "react-native"
 import React, { useState, useReducer, useEffect, useMemo, useCallback } from "react";
 import shortid from "shortid";
 
-import { Stack, Container, Box, Flex, Badge, HStack, Image } from "native-base"
+import { Badge, HStack, Image, Divider } from "native-base"
 import { Link } from "@react-navigation/native"
 
 import { typography } from '@/theme';
@@ -96,8 +96,9 @@ export function Home() {
   }, [tags])
 
   return (
-    <Box style={{ margin: 16 }}>
-      <TextInput
+    <View style={styles.container}>
+      <TextField
+        style={styles.input}
         variant="outlined"
         label="Add Ingredients"
         value={input}
@@ -108,33 +109,33 @@ export function Home() {
         blurOnSubmit={false}
         placeholder={strings.home.placeholder}
       />
-      <Text style={[typography.title, { color: colors.text }]}>{strings.home.infoText}</Text>
-      <Box style={styles.wrapper}>
-        <ScrollView>
-          <Box flex={1}>
-            <HStack direction="row" flexWrap="wrap" m={4} space={2} >
-              {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
-            </HStack>
-          </Box>
+      <View style={styles.wrapper}>
+        <ScrollView style={styles.tagContainer}>
+          <Text variant="caption" style={[typography.smallText, { color: colors.text }, { marginTop: 10 }]}>{strings.home.myIngredients}</Text>
+          <HStack direction="row" flexWrap="wrap" m={1} space={1} >
+            {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
+          </HStack>
         </ScrollView>
+        <Divider my="2" />
         {
-          popularTags.length > 0 && <Box >
-            <Text variant="caption" style={[typography.title, { color: colors.text }]}>{strings.home.popularIngredientsTitle}</Text>
+          popularTags.length > 0 &&
+          <ScrollView style={styles.popularTagsContainer}>
             <ScrollView>
-              <HStack direction="row" flexWrap="wrap" mb="2.5" m={4} space={2} >
+              <Text variant="caption" style={[typography.smallText, { color: colors.text }, { marginTop: 2 }]}>{strings.home.popularIngredientsTitle}</Text>
+              <HStack direction="row" flexWrap="wrap" mb={2} m={1} space={1} >
                 {popularTags.map((tag) => <Tag actionType={"ADD_TAG"} tag={tag} action={addExampleTag} key={tag.id} />)}
               </HStack>
             </ScrollView>
-          </Box>
+          </ScrollView>
         }
-      </Box>
+      </View>
       {
-        isError.status && <Box>
-          <Text style={[typography.title, { position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red", color: colors.text }]}>{isError?.message}</Text>
-        </Box>
+        isError.status && <View>
+          <Text style={[typography.text, { position: "absolute", start: 16, end: 16, bottom: 16, backgroundColor: "red", color: colors.text }]}>{isError?.message}</Text>
+        </View>
       }
       <LinkButton to={{ screen: "Suggestions Screen", params: { tags } }} title={strings.home.search} />
-    </Box>
+    </View>
   )
 }
 
@@ -146,17 +147,17 @@ const Tag = React.memo(function Tag({ tag, actionType, action }) {
     else if (actionType == "ADD_TAG") action(tag)
   }
 
-  console.log('image', tag.image)
-
   return (
     <Pressable onPress={() => onPress(tag.id)}>
-      <Badge label={tag.name} colorScheme="success">
-        <Image
-          size={6} 
-          borderRadius={100}
-          source={tag.image}
-         alt="Food Image" />
-        <Text style={[typography.title, { color: colors.text }]}>{tag.name}</Text>
+      <Badge label={tag.name} colorScheme="success" style={styles.badge}>
+        <HStack space={1}>
+          <Image
+            size={6}
+            borderRadius={100}
+            source={tag.image}
+            alt="Food Image" />
+          <Text style={[typography.text, { color: colors.text }]}>{upperCaseFirstLetter(tag.name)}</Text>
+        </HStack>
       </Badge>
     </Pressable>
   )

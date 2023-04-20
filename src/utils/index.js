@@ -16,3 +16,5 @@ export const randomColor = () => {
 
   return colors[randomIndex]
 }
+
+export const upperCaseFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1)

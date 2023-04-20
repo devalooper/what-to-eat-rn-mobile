@@ -3,20 +3,21 @@ import { strings } from '@/localization'
 
 export const PopulerIngredientImages = {
   pepper: require('@/assets/ingredients/pepper.png'),
-  salt: require('@/assets/ingredients/pepper.png'),
+  salt: null,
   onion: require('@/assets/ingredients/onion.png'),
-  garlic: require('@/assets/ingredients/pepper.png'),
+  garlic: null,
   tomato: require('@/assets/ingredients/tomato.png'),
   potato: require('@/assets/ingredients/potato.png'),
-  meat: require('@/assets/ingredients/pepper.png'),
-  chicken: require('@/assets/ingredients/pepper.png'),
-  beef: require('@/assets/ingredients/pepper.png'),
-  pork: require('@/assets/ingredients/pepper.png'),
-  fish: require('@/assets/ingredients/pepper.png'),
-  egg: require('@/assets/ingredients/pepper.png'),
-  milk: require('@/assets/ingredients/pepper.png'),
-  cheese: require('@/assets/ingredients/pepper.png'),
-  nullImage: require('@/assets/ingredients/pepper.png'),
+  cucumber: require('@/assets/ingredients/cucumber.png'),
+  meat: null,
+  chicken: null,
+  beef: null,
+  pork: null,
+  fish: null,
+  egg: null,
+  milk: null,
+  cheese: null,
+  nullImage: null,
 }
 
 export const getPopularIngredients = () => {
@@ -25,7 +26,7 @@ export const getPopularIngredients = () => {
   for(const [key, value] of Object.entries(strings.popularIngredients)) {
     ingredients.push({
       name: value,
-      image: PopulerIngredientImages[key] || PopulerIngredientImages['tomato'],
+      image: PopulerIngredientImages[key] || PopulerIngredientImages['cucumber'],
       id: shortid.generate()
     })
   }

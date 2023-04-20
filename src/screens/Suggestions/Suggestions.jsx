@@ -12,20 +12,9 @@ import { ScrollView } from 'native-base';
 export function Suggestions({ route }) {
   const { tags } = route.params;
   const { colors } = useTheme();
-  const dispatch = useDispatch();
-
-  console.log('tags', tags)
-
-  const logoutUser = () => {
-    dispatch(logout());
-  };
 
   return (
     <ScrollView >
-      {/* <Text style={[typography.title, styles.title, { color: colors.text }]}>
-        {strings.profile.message}
-      </Text>
-      <Button title={strings.profile.logout} onPress={logoutUser} /> */}
       <Text>Recipes Page</Text>
       <Text>
         {

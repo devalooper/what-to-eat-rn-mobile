@@ -15,9 +15,8 @@ export const en = {
     placeholder: "Ex: Tomato, Onion, Garlic, etc.",
     myIngredients: "My Ingredients",
   },
-  recipes: {
-
-  },
+  recipes: {},
+  calculator: {},
   login: {
     username: 'Username',
     usernameHint: 'Enter your username',

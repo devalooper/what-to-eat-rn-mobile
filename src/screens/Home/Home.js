@@ -37,7 +37,6 @@ export function Home() {
       tags.find((tag) => (tag.name.toLowerCase() === input.toLowerCase()))
     ) return;
 
-
     if (filteredTags.find((tag) => tag.name.toLowerCase() === input.toLowerCase())) {
       const ingredient = PopulerIngredients.find((ingredient) => ingredient.name.toLowerCase() === input.toLowerCase())
       dispatch({
@@ -110,8 +109,8 @@ export function Home() {
       />
       <View style={styles.wrapper}>
         <ScrollView style={styles.tagContainer}>
-          <Text variant="caption" style={[typography.smallText, { color: colors.text }, { marginTop: 10 }]}>{strings.home.myIngredients}</Text>
-          <HStack direction="row" flexWrap="wrap" m={1} space={1} >
+          <Text variant="caption" style={[typography.smallText, { color: colors.text }, { marginTop: 4 }]}>{strings.home.myIngredients}</Text>
+          <HStack direction="row" flexWrap="wrap" m={1}>
             {tags.map((tag) => <Tag actionType={"REMOVE_TAG"} tag={tag} action={removeTag} key={tag.id} />)}
           </HStack>
         </ScrollView>

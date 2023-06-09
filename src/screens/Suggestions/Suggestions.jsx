@@ -1,5 +1,5 @@
 import { useTheme } from '@react-navigation/native';
-import React from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { logout } from '@/actions/UserActions';
@@ -12,26 +12,25 @@ import foods from '@/store/DummyData/foods.js'
 
 export function Suggestions({ route }) {
   const { tags } = route.params;
-  const [suggest, setSuggest] = React.useState([]);
+  const [suggest, setSuggest] = useState([]);
 
   let existIngredientCount = 0;
   React.useEffect(() => {
-
     tags.forEach(tag => {
       foods.forEach(food => {
         food.ingredientNames.forEach(ingredient => {
-          if (tag.name.toLowerCase() == ingredient.toLowerCase()) ++existIngredientCount
+          if (tag.name.toLowerCase() == ingredient.toLowerCase()) existIngredientCount++
         });
 
-        if (existIngredientCount > 3) {
+        if (existIngredientCount >= 3) {
           food.ratio = Math.round((existIngredientCount / food.ingredientNames.length) * 100);
+          setSuggest(suggest => [...suggest, food]);
           existIngredientCount = 0;
-          setSuggest([...suggest, food])
         }
-        else return
+        else return null;
       })
     })
-    return () => setSuggest([])
+    return () => setSuggest([]);
   }, [])
 
   return (
@@ -72,7 +71,7 @@ const SuggestionList = ({ suggest }) => {
             <Text fontSize="xs" _dark={{
               color: "warmGray.50"
             }} color="coolGray.800" alignSelf="flex-start">
-              {item.ratio}% uyumlu
+              {item?.ratio}% uyumlu
             </Text>
           </HStack>
         </Box>} keyExtractor={item => item.id} />

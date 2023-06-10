@@ -7,6 +7,7 @@ export const NAVIGATION = {
   recipes: 'Recipes Screen',
   calculator: 'Calculator Screen',
   profile: 'Profile Screen',
+  foodDetail: 'Food Detail Screen',
 };
 
 export const TABS = {
@@ -15,4 +16,5 @@ export const TABS = {
   recipes: 'Recipes',
   calculator: 'Calculator',
   profile: 'Profile',
+  foodDetail: 'Food Detail',
 };

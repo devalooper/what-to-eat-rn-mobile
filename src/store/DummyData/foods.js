@@ -6,6 +6,7 @@ const foods = [
     "title": "İmam Bayıldı",
     "foodTitle": "vegatable",
     "cookTime": "50 dk",
+    "calories": "191kcal",
     "ingredientNames": [
       "egg",
       "salt",
@@ -45,6 +46,7 @@ const foods = [
     "id": 2,
     "title": "Mantı",
     "foodTitle": "other",
+    "calories": "509 kcal",
     "cookTime": "1 saat 30 dk",
     "ingredientNames": [
       "flour",
@@ -86,6 +88,8 @@ const foods = [
   {
     "id": 3,
     "title": "İskender Kebap",
+    "calories": "755 kcal",
+
     "foodTitle": "other",
     "cookTime": "1 saat",
     "ingredientNames": [
@@ -125,6 +129,8 @@ const foods = [
   {
     "id": 4,
     "title": "Lahmacun",
+    "calories": "220 kcal",
+
     "foodTitle": "other",
     "cookTime": "40 dk",
     "ingredientNames": [
@@ -183,6 +189,8 @@ const foods = [
     "title": "Kısır",
     "foodTitle": "vegan",
     "cookTime": "20dk",
+    "calories": "200 kcal",
+
     "ingredientNames": [
       "bulgur wheat",
       "onion",
@@ -226,6 +234,8 @@ const foods = [
     "title": "Tabbouleh Salatası",
     "foodTitle": "vegatable",
     "cookTime": "30dk",
+    "calories": "329 kcal",
+
     "ingredientNames": [
       "bulgur wheat",
       "oninon",
@@ -265,6 +275,8 @@ const foods = [
    {
      "id": 7,
      "title": "Kuru Fasulye",
+     "calories": "320 kcal",
+
      "foodTitle": "vegatable",
      "cookTime": "2 saat",
      "ingredientNames": [
@@ -304,6 +316,8 @@ const foods = [
    {
      "id": 8,
      "title": "Nohut Yemeği",
+     "calories": "364 kcal",
+
      "foodTitle": "vegatable",
      "cookTime": "60dk",
      "ingredientNames": [
@@ -347,6 +361,8 @@ const foods = [
    {
      "id": 9,
      "title": "İçli Köfte",
+     "calories": "200 kcal",
+
      "foodTitle": "other",
      "cookTime": "1 saat 30 dk",
      "ingredientNames": [
@@ -395,6 +411,8 @@ const foods = [
    {
      "id": 10,
      "title": "Gavurdağı Salatası",
+     "calories": "115 kcal",
+
      "foodTitle": "vegetable",
      "cookTime": "20 dk",
      "ingredientNames": [
@@ -436,6 +454,8 @@ const foods = [
    {
      "id": 11,
      "title": "Çoban Salata",
+     "calories": "120 kcal",
+
      "foodTitle": "vegetable",
      "cookTime": "10dk",
      "ingredientNames": [
@@ -471,6 +491,8 @@ const foods = [
    {
      "id": 12,
      "title": "Mercimek Çorbası",
+     "calories": "60 kcal",
+
      "foodTitle": "vegatable",
      "cookTime": "40dk",
      "ingredientNames": [
@@ -519,6 +541,8 @@ const foods = [
    {
      "id": 13,
      "title": "Patlıcan Musakka",
+     "calories": "173 kcal",
+
      "foodTitle": "other",
      "cookTime": "1 saat",
      "ingredientNames": [
@@ -583,6 +607,8 @@ const foods = [
    {
      "id": 14,
      "title": "Karışık Pide",
+     "calories": "800 kcal",
+
      "foodTitle": "other",
      "cookTime": "40dk",
      "ingredientNames": [
@@ -621,6 +647,8 @@ const foods = [
    {
      "id": 15,
      "title": "Hamsi Tava",
+     "calories": "720 kcal",
+
      "ingredientNames": [
       "anchovy",
       "corn flour",
@@ -652,6 +680,8 @@ const foods = [
    {
      "id": 16,
      "title": "Tavuk Şiş",
+     "calories": "1700 kcal",
+
      "foodTitle": "other",
      "cookTime": "60dk",
      "ingredientNames": [
@@ -689,6 +719,8 @@ const foods = [
    {
      "id": 17,
      "title": "Beyti Kebabı",
+     "calories": "920 kcal",
+
      "foodTitle": "other",
      "cookTime": "40dk",
      "ingredientNames": [
@@ -729,6 +761,8 @@ const foods = [
    {
      "id": 18,
      "title": "Anne Köftesi",
+     "calories": "400 kcal",
+
      "foodTitle": "other",
      "cookTime": "40 dk",
      "ingredientNames": [
@@ -774,6 +808,8 @@ const foods = [
    {
      "id": 19,
      "title": "Tandır Kebabı",
+     "calories": "100gr eşittir 250 kcal",
+
      "foodTitle": "other",
      "cookTime": "3 saat",
      "ingredientNames": [
@@ -815,6 +851,8 @@ const foods = [
    {
      "id": 20,
      "title": "Su Böreği",
+     "calories": "750 kcal",
+
      "foodTitle": "other",
      "cookTime": "60dk",
      "ingredientNames": [
@@ -849,6 +887,8 @@ const foods = [
    {
      "id": 21,
      "title": "Yoğurt Kebabı",
+     "calories": "100gr eşittir 240 kcal",
+
      "foodTitle": "meat",
      "cookTime": "60 dk",
      "ingredientNames": [],
@@ -881,6 +921,8 @@ const foods = [
      "id": 22,
      "title": "Ispanaklı Börek",
      "foodTitle": "vegetable",
+     "calories": "295 kcal",
+
      "cookTime": "60 dk",
      "ingredientNames": [
       "dough",
@@ -926,6 +968,7 @@ const foods = [
      "id": 23,
      "title": "Kıymalı Pide",
      "foodTitle": "meat",
+     "calories": "600 kcal",
      "cookTime": "40 dk",
      "ingredientNames": [
       "dry yeast",
@@ -971,6 +1014,7 @@ const foods = [
    {
      "id": 24,
      "title": "Şiş Kebabı",
+     "calories": "220 kcal",
      "foodTitle": "meat",
      "cookTime": "40 dk",
      "ingredientNames": [
@@ -1008,6 +1052,7 @@ const foods = [
    {
      "id": 25,
      "title": "Karnıyarık",
+     "calories": "170 kcal",
      "foodTitle": "vegetable",
      "cookTime": "60 dk",
      "ingredientNames": [
@@ -1054,6 +1099,7 @@ const foods = [
    {
      "id": 26,
      "title": "Saksuka",
+     "calories": "75 kcal",
      "foodTitle": "vegetable",
      "cookTime": "30 dk",
      "ingredientNames": [
@@ -1093,6 +1139,7 @@ const foods = [
    {
      "id": 27,
      "title": "Közlenmiş Patlıcan Salatası",
+     "calories": "79 kcal",
      "foodTitle": "salad",
      "cookTime": "40 dk",
      "ingredientNames": [
@@ -1131,6 +1178,7 @@ const foods = [
    {
      "id": 28,
      "title": "Domates Çorbası",
+     "calories": "70 kcal",
      "foodTitle": "soup",
      "cookTime": "30 dk",
      "ingredientNames": [
@@ -1174,6 +1222,8 @@ const foods = [
    {
      "id": 29,
      "title": "Cevizli Biber Dolması",
+     "calories": "300 kcal",
+
      "foodTitle": "vegetable",
      "cookTime": "60 dk",
      "ingredientNames": [
@@ -1221,6 +1271,8 @@ const foods = [
    {
      "id": 30,
      "title": "Şekerpare",
+     "calories": "283 kcal",
+      
      "foodTitle": "dessert",
      "cookTime": "40 dk",
      "ingredientNames": [
@@ -1258,6 +1310,8 @@ const foods = [
    {
      "id": 31,
      "title": "Et Kavurma",
+     "calories": "345 kcal",
+
      "foodTitle": "main",
      "cookTime": "60 dk",
      "ingredientNames": [
@@ -1288,6 +1342,8 @@ const foods = [
    {
      "id": 32,
      "title": "Etli Güveç",
+     "calories": "345 kcal",
+
      "foodTitle": "main course",
      "cookTime": "120 dk",
      "ingredientNames": [
@@ -1339,6 +1395,8 @@ const foods = [
    {
      "id": 33,
      "title": "Bulgur Pilavı",
+     "calories": "114 kcal",
+
      "foodTitle": "main dish",
      "cookTime": "30 dk",
      "ingredientNames": [
@@ -1367,6 +1425,8 @@ const foods = [
    {
      "id": 34,
      "title": "Kabak Dolması",
+     "calories": "144 kcal",
+
      "foodTitle": "main dish",
      "cookTime": "60 dk",
      "ingredientNames": [
@@ -1409,6 +1469,8 @@ const foods = [
    {
      "id": 35,
      "title": "Taze Fasulye",
+     "calories": "40 kcal",
+
      "foodTitle": "main",
      "cookTime": "40 dk",
      "ingredientNames": [
@@ -1444,6 +1506,8 @@ const foods = [
    {
      "id": 36,
      "title": "Tarhana Çorbası",
+     "calories": "182 kcal",
+
      "foodTitle": "soup",
      "cookTime": "1 saat",
      "ingredientNames": [
@@ -1472,6 +1536,8 @@ const foods = [
    {
      "id": 37,
      "title": "Muhallebi Tatlısı",
+     "calories": "122 kcal",
+
      "foodTitle": "dessert",
      "cookTime": "30 dk",
      "ingredientNames": [
@@ -1502,6 +1568,8 @@ const foods = [
    {
      "id": 38,
      "title": "Baklava",
+     "calories": "270 kcal",
+
      "foodTitle": "dessert",
      "cookTime": "1 saat",
      "ingredientNames": [
@@ -1538,6 +1606,8 @@ const foods = [
    {
      "id": 39,
      "title": "Mantar Yemeği",
+     "calories": "154 kcal",
+
      "foodTitle": "vegetable",
      "cookTime": "30 dk",
      "ingredientNames": [

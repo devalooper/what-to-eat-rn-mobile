@@ -6,4 +6,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  buttonContainer: {
+    alignSelf: 'flex-start',
+  },
+  buttonText: {
+    fontSize: 16,
+    color: 'white',
+  },
 });

@@ -1,13 +1,14 @@
 import { useTheme } from '@react-navigation/native';
 import React from 'react';
-// import { Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { logout } from '@/actions/UserActions';
-import { Button, LinkButton } from '@/components';
+import { Button } from 'native-base';
 import { strings } from '@/localization';
 import { styles } from './Suggestions.styles';
 import { typography } from '@/theme';
 import { NAVIGATION } from '@/constants';
+import { IconButton } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
 
 import {
   Avatar,
@@ -31,6 +32,8 @@ export function Recipes({ route }) {
 }
 
 const FoodList = () => {
+  const navigation = useNavigation(); // Access navigation object
+  
   return (
     <Box p="2">
       <Heading fontSize="xl" pb="3">
@@ -72,25 +75,24 @@ const FoodList = () => {
                     color: 'warmGray.200',
                   }}
                 >
+                CookTime:
                   {item.cookTime}
                 </Text>
               </VStack>
               <Spacer />
-              <Text
-                fontSize="xs"
-                _dark={{
-                  color: 'warmGray.50',
+              <Button
+                onPress={() => {
+                  navigation.navigate(NAVIGATION.foodDetail, { item }); // Navigate to FoodDetails screen with the item data
                 }}
-                color="coolGray.800"
-                alignSelf="flex-start"
+                style={{
+                  margin: 15,
+                  flex: 1, // Set flex to 1 to expand the button to match the food item
+                  height: 48, // Set the desired height of the button
+                  // Additional styling properties as needed
+                }}
               >
-                {item.id}% uyumlu
-              </Text>
-              <LinkButton
-                to={{ screen: NAVIGATION.foodDetail, params: { item } }}
-                title="Detay"
-                style={typography.smallText}
-              />
+                Detay
+              </Button>
             </HStack>
           </Box>
         )}

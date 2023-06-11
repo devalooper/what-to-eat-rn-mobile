@@ -25,7 +25,7 @@ export function AppNavigator() {
       <Tab.Screen name={TABS.home} component={HomeNavigator} />
       <Tab.Screen name={TABS.recipes} component={RecipesNavigator} />
       <Tab.Screen name={TABS.calculator} component={CalculatorNavigator} />
-      <Tab.Screen name={TABS.profile} component={ProfileNavigator} />
+
     </Tab.Navigator>
   );
 }
